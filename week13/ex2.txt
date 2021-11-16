@@ -1,0 +1,25 @@
+1 case:
+When a system doesn't have any information about the maximum need of resources by each process.
+I recommend deadlock prevention
+We can eliminate one of the deadlock conditions that will garantee the absence of the deadlock. For example eliminate no preemption condition: preempt resources from the process when resources required by other high priority processes.
+Can be useful deadlock recovery
+We can abort a process or preempt some resources when deadlocks are detected.
+Do not recomend deadlock avoidance. It is worse than deadlock prevention because there is potential for lost work when processes must be aborted or have their resources preempted.
+We can not use this method because we do not have information about:
+Max need of resources by each process; 
+Currently, allocated resources by each process; 
+Max free available resources in the system.
+All this information is nessesary to understand if the system is in safe or unsafe state.
+2 case:
+It is impossible to abort the process or preempt resources
+I recommend deadlock avoidance
+We have information about the distribution of the resources, so we can predict when the system will enter the unsafe state and avoid it.
+Can be useful deadlock prevention
+We can eliminate one of the deadlock conditions. For example Hold and Wait by requiring that processes holding resources must release them before requesting new resources
+Do not recomend deadlock recovery
+We can not abort a process or preempt some resources when deadlocks are detected, so this strategy is useless in this case.
+3 case:
+There is little information about current system state.
+I recommend deadlock recovery
+Do not recomend deadlock prevention and avoidance.
+In this case deadlock prevention and avoidance are not useful, because we do not have sufficient information, so we can use only deadlock recovery.
